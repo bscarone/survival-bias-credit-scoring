@@ -1,0 +1,11 @@
+# Python 3.9.21
+# Versions pinned to those used to produce the published results.
+
+numpy==2.0.2
+pandas==2.2.3
+scikit-learn==1.6.1
+matplotlib==3.9.4
+
+# Format readers used internally by pandas; versions are not result-relevant.
+xlrd>=2.0        # read_excel, for the UCI Default .xls
+pyarrow>=10.0    # read_feather, for the LendingClub download

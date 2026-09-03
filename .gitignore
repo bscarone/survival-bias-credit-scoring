@@ -1,0 +1,58 @@
+# =============================================================================
+# Datasets
+# -----------------------------------------------------------------------------
+# The three datasets are third-party and are not redistributed here.
+# See data/README.md for acquisition instructions, then run:
+#   python run_preprocess.py <dataset>
+#   python generate_downsampled.py
+# =============================================================================
+data/*
+!data/README.md
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# =============================================================================
+# Editors and OS
+# =============================================================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# Notebooks
+# =============================================================================
+*.ipynb
+.ipynb_checkpoints/
+
+# =============================================================================
+# Generated output
+# =============================================================================
+*.pdf
+*.png
+*.svg
+*.log
+
+# Per-run JSON dumps (written when n_runs == 1)
+experiments/**/*.json
+
+# Smoke-test and backup output directories
+experiments/**/results_quick/
+experiments/**/figures_quick/
+experiments/**/*_backup_*/
+
+# Root-level only (Appendix B output from model_evaluation.py).
+# Keep the leading slash: without it, this would also match
+# experiments/exploration/results/ and untrack the committed CSVs.
+/results/
+
+# Learning-curve output (n0 selection; analysis code not included -- see README)
+/figures/
